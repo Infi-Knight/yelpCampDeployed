@@ -17,7 +17,9 @@ var campgroundRoutes  = require("./routes/campgrounds"),
 
 // Connect to local database
 // DON'T USE A PASSWORD CONTAINING @ SYMBOL IN MONGOLABS DATABASE USER:
-mongoose.connect("mongodb://ravi:soni@ds151941.mlab.com:51941/dreamorchid");
+mongoose.connect(process.env.DATABASEURL);
+
+// mongoose.connect("mongodb://ravi:soni@ds151941.mlab.com:51941/dreamorchid");
 // mongoose.connect("mongodb://localhost/yelp_camp");
 
 
